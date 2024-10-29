@@ -30,11 +30,9 @@ public class Lab6 {
 
         var threshold = Imgproc.threshold(grayImage, thresholdImage, thres, 255, Imgproc.THRESH_BINARY);
 
-//        Imgcodecs.imwrite(ConfigUtils.getConfigProperty(LAB6_OUTPUT_PATH) + "threshold.jpg", thresholdImage);
         Imgproc.blur(thresholdImage, detectedEdgesImage, new Size(3, 3));
 
         Imgproc.Canny(detectedEdgesImage, detectedEdgesImage, threshold, threshold*3);
-//        Imgcodecs.imwrite(ConfigUtils.getConfigProperty(LAB6_OUTPUT_PATH) + "edge.jpg", detectedEdgesImage);
 
         var contours = new ArrayList<MatOfPoint>();
         var hierarchy = new Mat();

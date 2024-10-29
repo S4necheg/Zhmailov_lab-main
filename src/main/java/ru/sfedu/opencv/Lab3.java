@@ -50,7 +50,7 @@ public class Lab3 {
 
     public static Mat moveImageFromCenter(String imagePath, int xOffset, int yOffset) {
         var srcImage = Imgcodecs.imread(imagePath, Imgcodecs.IMREAD_COLOR);
-        //https://java.tutorialink.com/shift-image-in-opencv/
+
         Mat warpMat = new Mat( 2, 3, CvType.CV_64FC1 );
 
         warpMat.put(0 ,0, 1, 0, xOffset, 0, 1, yOffset);

@@ -40,7 +40,7 @@ public class Lab3Test extends BaseTest {
     public void testCreateChangedSizeImage() {
         var imagePath = ConfigUtils.getConfigProperty(LAB3_IMAGE_PATH);
 
-        var mat = createChangedSizeImage(imagePath, 100, 100);
+        var mat = createChangedSizeImage(imagePath, 500, 500);
         Imgcodecs.imwrite(ConfigUtils.getConfigProperty(LAB3_OUTPUT_PATH) + "sizeChangedImage.jpg", mat);
 
     }
@@ -50,7 +50,7 @@ public class Lab3Test extends BaseTest {
     public void testCreateRepeatedImage() {
         var imagePath = ConfigUtils.getConfigProperty(LAB3_IMAGE_PATH);
 
-        var imread = repeatImage(imagePath, 3, 3);
+        var imread = repeatImage(imagePath, 4, 4);
         Imgcodecs.imwrite(ConfigUtils.getConfigProperty(LAB3_OUTPUT_PATH) + "repeated.jpg", imread);
     }
 
@@ -88,7 +88,7 @@ public class Lab3Test extends BaseTest {
     public void testMoveImageFromCenter() {
         var imagePath = ConfigUtils.getConfigProperty(LAB3_IMAGE_PATH);
 
-        var mat = moveImageFromCenter(imagePath, 0, 1000);
+        var mat = moveImageFromCenter(imagePath, 0, 500);
         Imgcodecs.imwrite(ConfigUtils.getConfigProperty(LAB3_OUTPUT_PATH) + "moved.jpg", mat);
     }
 

@@ -16,7 +16,6 @@ public class Lab2 {
 
     public static void main(String[] args) {
         System.load(ConfigUtils.getConfigProperty(PATH_TO_NATIVE_LIB_LINUX));
-//        showImage();
     }
 
     public static JFrame showImage(Mat mat, int imageType) {

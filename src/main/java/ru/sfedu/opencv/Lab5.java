@@ -50,17 +50,13 @@ public class Lab5 {
         var threshold = Imgproc.threshold(
                 denoisingImage,
                 thresholdImage,
-                20, // в зависимости от картиночки этот параметр стоит менять, зависит от контраста цветов самой картинки
+                20, // в зависимости от image этот параметр стоит менять, зависит от контраста цветов самой картинки
                 255,
                 Imgproc.THRESH_BINARY
         );
         thresholdImage.convertTo(thresholdImage, CvType.CV_8U);
 
         Imgcodecs.imwrite(outputPath + "thresholdImage.jpg", thresholdImage);
-//
-//        var edgeImage = new Mat();
-//        Imgproc.Canny(thresholdImage, edgeImage, threshold, threshold * 3, 3, true);
-//        Imgcodecs.imwrite(outputPath + "edgeImage.jpg", thresholdImage);
 
         var contours = new ArrayList<MatOfPoint>();
         var hierarchy = new Mat();
